@@ -14,4 +14,4 @@ jobs:
       - run: cargo build --release --all-features
       - uses: actions/download-artifact@v3
         with:
-          path: /home/runner/work/hello-world-rust/hello-world-rust/
+          path: /home/runner/work/hello-world-rust/target
