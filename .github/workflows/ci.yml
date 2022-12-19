@@ -12,6 +12,8 @@ jobs:
         with:
           toolchain: stable
       - run: cargo build --release --all-features
-      - uses: actions/download-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
-          path: /home/runner/work/hello-world-rust/target
+          path: $(pwd)/target/release/hello-world
+          name: rust-binary
+          retention-days: 5
